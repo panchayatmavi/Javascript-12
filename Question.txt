@@ -1,0 +1,4 @@
+Q1. WAP in qbasic programming language to calculate the liquid pressure of water. (p = hdg, d=1000kg/m^3)
+Q2. WAP to calculate the slope of a line joining two points. (Slope (m) = (y2-y1)/(x2-x1))
+Q3. WAP to calculate the distance between two points. 
+[Distance (d) = SQR((x2-x1)^2+(y2-y1)^2)]

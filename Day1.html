@@ -1,0 +1,19 @@
+<html>
+<head>
+<title> Working with javascipt</title>
+</head>
+<body>
+<button onmouseenter="myFun1();" onmouseleave="myFun2();"> Add Numbers</button>
+<h1 id="msg"> Welcome to the world of javascript</h1>
+<script>
+function myFun1(){
+let msg = document.getElementById('msg');
+msg.innerHTML="Stay away from me";
+}
+function myFun2(){
+let msg = document.getElementById('msg');
+msg.innerHTML="Thank you";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body onload="displayList();">
+    <h3 style="text-align: center;">Enrollment Form</h3>
+    <form action="#" id="myForm" method="GET" onsubmit="return save(event);">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name">
+        <br>
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" placeholder="Enter your age">
+        <br>
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" placeholder="Enter your address">
+        <br>
+        <button >Save</button>
+    </form> 
+    <table width="100%" border="2" >
+        <caption>List of students</caption>
+        <thead>
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </thead>
+        <tbody id="table"></tbody>
+    </table>   
+</body>
+<script>
+    let persons = [];
+    function save(){
+        event.preventDefault();
+        let name = myForm.name.value;
+        let age = myForm.age.value;
+        let address = myForm.address.value;
+        persons.push([name,age,address]);
+        displayList();
+    }
+    function displayList(){
+        console.log(persons);
+        let table = document.getElementById('table');
+        list ='';
+        for(i=0;i<persons.length;i++){
+            let person =persons[i];
+            list+=`<tr>
+                    <td> ${i+1} </td>
+                    <td> ${person[0]} </td>
+                    <td> ${person[1]} </td>
+                    <td> ${person[2]} </td>
+                    </tr>`;
+        }     
+        table.innerHTML = list;
+    }
+</script>
+</html>

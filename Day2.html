@@ -1,0 +1,21 @@
+<html>
+<head> 
+<title> Random Color </title>
+</head>
+<body>
+<h3>  Rainbow </h3>
+<button onclick="changeColor();"> Change Background color </button>
+</body>
+
+<script>
+function changeColor(){
+	let red = Math.floor(Math.random()*256);
+	let blue = Math.floor(Math.random()*256);
+	let green = Math.floor(Math.random()*256);
+	let alpha =Math.random();
+	const color = `rgba(${red},${blue},${green},${alpha})`;
+	document.body.style.backgroundColor=color;
+}
+changeColor();
+</script>
+</html>
